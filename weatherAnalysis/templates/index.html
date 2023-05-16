@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Weather Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Historic Station Data</h1>
+    <form method="POST">
+        <label for="station">Select a Station:
+            <select name="station" id="dropdown">
+                <option value="aberporth" {% if selected_station == 'aberporth' %}selected{% endif %}>Aberporth</option>
+                <option value="armagh" {% if selected_station == 'armagh' %}selected{% endif %}>Armagh</option>
+                <option value="ballypatrick" {% if selected_station == 'ballypatrick' %}selected{% endif %}>Ballypatrick Forest</option>
+                <option value="bradford" {% if selected_station == 'bradford' %}selected{% endif %}>Bradford</option>
+                <option value="camborne" {% if selected_station == 'camborne' %}selected{% endif %}>Camborne</option>
+                <option value="cambridge" {% if selected_station == 'cambridge' %}selected{% endif %}>Cambridge NIAB</option>
+                <option value="cardiff" {% if selected_station == 'cardiff' %}selected{% endif %}>Cardiff Bute Park</option>
+                <option value="chivenor" {% if selected_station == 'chivenor' %}selected{% endif %}>Chivenor</option>
+                <option value="cwmystwyth" {% if selected_station == 'cwmystwyth' %}selected{% endif %}>Cwmystwyth</option>
+                <option value="dunstaffnage" {% if selected_station == 'dunstaffnage' %}selected{% endif %}>Dunstaffnage</option>
+                <option value="durham" {% if selected_station == 'durham' %}selected{% endif %}>Durham</option>
+                <option value="eastbourne" {% if selected_station == 'eastbourne' %}selected{% endif %}>Eastbourne</option>
+                <option value="eskdalemuir" {% if selected_station == 'eskdalemuir' %}selected{% endif %}>Eskdalemuir</option>
+                <option value="heathrow" {% if selected_station == 'heathrow' %}selected{% endif %}>Heathrow</option>
+                <option value="hurn" {% if selected_station == 'hurn' %}selected{% endif %}>Hurn</option>
+                <option value="lerwick" {% if selected_station == 'lerwick' %}selected{% endif %}>Lerwick</option>
+                <option value="leuchars" {% if selected_station == 'leuchars' %}selected{% endif %}>Leuchars</option>
+                <option value="manston" {% if selected_station == 'manston' %}selected{% endif %}>Manston</option>
+                <option value="newtonrigg" {% if selected_station == 'newtonrigg' %}selected{% endif %}>Newton Rigg</option>
+                <option value="oxford" {% if selected_station == 'oxford' %}selected{% endif %}>Oxford</option>
+                <option value="paisley" {% if selected_station == 'paisley' %}selected{% endif %}>Paisley</option>
+                <option value="ringway" {% if selected_station == 'ringway' %}selected{% endif %}>Ringway</option>
+                <option value="rossonwye" {% if selected_station == 'rossonwye' %}selected{% endif %}>Ross-on-Wye</option>
+                <option value="shawbury" {% if selected_station == 'shawbury' %}selected{% endif %}>Shawbury</option>
+                <option value="sheffield" {% if selected_station == 'sheffield' %}selected{% endif %}>Sheffield</option>
+                <option value="stornoway" {% if selected_station == 'stornoway' %}selected{% endif %}>Stornoway Airport</option>
+                <option value="suttonbonington" {% if selected_station == 'suttonbonington' %}selected{% endif %}>Sutton Bonington</option>
+                <option value="tiree" {% if selected_station == 'tiree' %}selected{% endif %}>Tiree</option>
+                <option value="valley" {% if selected_station == 'valley' %}selected{% endif %}>Valley</option>
+                <option value="waddington" {% if selected_station == 'waddington' %}selected{% endif %}>Waddington</option>
+                <option value="wickairport" {% if selected_station == 'wickairport' %}selected{% endif %}>Wick Airport</option>
+                <option value="yeovilton" {% if selected_station == 'yeovilton' %}selected{% endif %}>Yeovilton</option>
+            </select>
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if image_url1 %}
+        <img src="{{ image_url1 }}" alt="Monthly Weather Averages">
+        <img src="{{ image_url2 }}" alt="Monthly Weather Averages">
+        <img src="{{ image_url3 }}" alt="Monthly Weather Averages">
+    {% else %}
+        <h2></h2>
+    {% endif %}
+
+</body>
+</html>
