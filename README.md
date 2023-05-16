@@ -1,3 +1,13 @@
+# Problem Statement
+The following is a Python coding task to analyse historic weather data.
+1.	Use 20 or more years of weather data to calculate the monthly averages for:
+    •	minimum and maximum temperatures,
+    •	precipitation,
+    •	hours of sunlight.
+2.	Present this data in chart form for a whole year's worth of monthly values, label the chart and data elements.  What this should look like is January and February averages for minimum and maximum temperatures are low and this increases through the Spring and Summer months.
+Notes
+This resource from the Met Office has historic data from a number of weather stations: Met Office Historic Data
+
 # weatherDataAnalysis
 This Python code analyzes weather data retrieved from the Met Office website. It performs the following tasks:
 
