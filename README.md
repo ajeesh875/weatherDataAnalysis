@@ -1,4 +1,4 @@
-# Problem Statement
+# Statement
 The following is a Python coding task to analyse historic weather data.
 1.	Use 20 or more years of weather data to calculate the monthly averages for:
     •	minimum and maximum temperatures,
