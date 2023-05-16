@@ -11,7 +11,7 @@ This resource from the Met Office has historic data from a number of weather sta
 # weatherDataAnalysis
 This Python code analyzes weather data retrieved from the Met Office website. It performs the following tasks:
 
-1. Retrieves weather data from the Met Office website based on the selected weather station.
+1. Retrieves weather data of all the years (Approx 80 years) available in the Met Office website based on the selected weather station.  
 2. Processes and cleans the data.
 3. Calculates monthly averages for temperature, precipitation, and sunlight.
 4. Generates line charts for the monthly averages using Matplotlib and Seaborn.
